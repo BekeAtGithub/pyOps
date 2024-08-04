@@ -3,7 +3,7 @@ from azure.mgmt.datafactory import DataFactoryManagementClient
 from azure.mgmt.datafactory.models import CreateRunResponse
 import time
 
-#azure credentials and ADF details:
+#Azure credentials and ADF details:
 subscription_id = 'subID'
 resource_group_name = 'rgName'
 data_factory_name = 'ADFname'
