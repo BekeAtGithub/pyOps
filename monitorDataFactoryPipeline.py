@@ -13,7 +13,7 @@ pipeline_name = 'pipelineName'
 credentials = DefaultAzureCredential()
 adf_client = DataFactoryManagementClient(credentials, subscription_id)
 
-#trigger the pipeline
+#trigger the pipeline.
 run_response = adf_clilent.pipelilnes.create_run(resource_group_name, data_factory_name, pipelilne_name)
 run_id = run_response.run_id
 
