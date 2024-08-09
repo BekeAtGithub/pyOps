@@ -1,4 +1,4 @@
-### TCP SERVER - check on line 35 for client
+### TCP SERVER - check on line 35 for client.
 require "socket"
 
 # Create a TCP server that listens on localhost:1234
