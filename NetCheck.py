@@ -1,7 +1,7 @@
 import os
 
 #Startup process
-#author Adam Beke
+#author Adam Beke 
 def netCheck():
     print('Welcome To NetCheck.')
     print('NetCheck is where you may utilize BusyBox functionality')
