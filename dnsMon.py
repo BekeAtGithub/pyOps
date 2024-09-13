@@ -1,19 +1,17 @@
 '''
-This script uses `dns.resolver` module from the `dnspython` package to query the DNS server
+The script has dns.resolver module from the dnspython library to query the DNS server - might need to install with "pip3 install dnspython" from command line 
 - it basically monitors DNS resolution times of a specific domain. 
-
-if you're running this on Linux install dnspython if you haven't already with pip:
-pip install dnspython
 '''
 
 import dns.resolver
 import time
 
+# monitor_dns(domain, interval)` This function continuously monitors DNS resolution times for the given domain at the specified interval (default is 60 seconds)
 def monitor_dns(domain, interval=60):
-    resolver = dns.resolver.Resolver()
+    resolver = dns.resolver.Resolver() # resolver.resolve(domain) Resolves the DNS for the specified domain. 
 
     while True:
-        start_time = time.time()
+        start_time = time.time() #time.time() Used to calculate the time before and after the DNS resolution to determine how long it took.
 
         try:
             # Query DNS for the domain
@@ -24,7 +22,7 @@ def monitor_dns(domain, interval=60):
             response_time = end_time - start_time
             print(f"DNS resolution for {domain} took {response_time:.4f} seconds.")
 
-        except dns.resolver.NoAnswer:
+        except dns.resolver.NoAnswer: #The script handles different exceptions like `NoAnswer`, `NXDOMAIN`, `Timeout`, and any other general DNS exceptions.
             print(f"No answer found for domain: {domain}")
         except dns.resolver.NXDOMAIN:
             print(f"Domain {domain} does not exist.")
@@ -34,24 +32,9 @@ def monitor_dns(domain, interval=60):
             print(f"An error occurred: {e}")
 
         # Wait for the specified interval before checking again
-        time.sleep(interval)
+        time.sleep(interval) #interval This parameter controls how often the script checks the DNS resolution time. You can adjust it as needed.
 
 if __name__ == "__main__":
     domain_to_monitor = "example.com"
-    monitor_dns(domain_to_monitor, interval=60)
+    monitor_dns(domain_to_monitor, interval=60) # print the DNS resolution time every 60 seconds. You can modify it to log the results to a file or send alerts if the resolution time exceeds a certain threshold.
 
-'''
-### Explanation:
-
-- **`monitor_dns(domain, interval)`**: This function continuously monitors DNS resolution times for the given domain at the specified interval (default is 60 seconds).
-
-- **`resolver.resolve(domain)`**: Resolves the DNS for the specified domain. 
-
-- **`time.time()`**: Used to calculate the time before and after the DNS resolution to determine how long it took.
-
-- **Exception Handling**: The script handles different exceptions like `NoAnswer`, `NXDOMAIN`, `Timeout`, and any other general DNS exceptions.
-
-- **`interval`**: This parameter controls how often the script checks the DNS resolution time. You can adjust it as needed.
-
-This script will print the DNS resolution time every 60 seconds. You can modify it to log the results to a file or send alerts if the resolution time exceeds a certain threshold.
-'''
