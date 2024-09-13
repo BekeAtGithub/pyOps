@@ -4,7 +4,7 @@ import json
 
 urllib3.disable_warnings()
 
-# MODIFY URL IP TO LOCAL IP OF SERVER - DEFAULT 0.0.0.0
+# MODIFY URL IP TO LOCAL IP OF SERVER - DEFAULT 0.0.0.0 
 BASE_URL = "https://0.0.0.0:443/"
 
 def sdwan_authenticate(BASE_URL, username, password):
