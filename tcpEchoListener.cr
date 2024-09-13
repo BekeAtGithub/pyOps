@@ -4,7 +4,7 @@ require "socket"
 HOST = "127.0.0.1"
 PORT = 3000
 
-# Create a new TCPServer instance to listen for incoming connections
+# Create a new TCPServer instance to listen for incoming connections 
 server = TCPServer.new(HOST, PORT)
 
 puts "Server is running on #{HOST}:#{PORT}"
