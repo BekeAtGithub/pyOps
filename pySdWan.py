@@ -4,14 +4,14 @@ import json
 
 urllib3.disable_warnings()
 
-# MODIFY URL IP TO LOCAL IP OF SERVER - DEFAULT 0.0.0.0 
+#modifies the url ip to change to the local ip of the server - default is 0.0.0.0
 BASE_URL = "https://0.0.0.0:443/"
 
 def sdwan_authenticate(BASE_URL, username, password):
     auth_url = f'{BASE_URL}J_security_check'
     payload = f'j_username={username}&j_password={password}'
     headers = {
-        'Content-Type': '<url extension>',  # REPLACE URL EXTENSION WITH WHATEVER PATH COMES AFTER THE BASE_URL
+        'Content-Type': '<url extension>',  # replace url extension with whatever path comes after the BASE_URL
     }
 
     response = requests.post(auth_url, headers=headers, data=payload, verify=False)
@@ -87,7 +87,7 @@ def main():
     username = 'admin'
     password = 'SecurePass123!'
 
-    # AUTHENTICATE WITH VMANAGE
+    # authentication with vmanage
     print('[AUTHENTICATING]')
     auth_status, cookie_or_code = sdwan_authenticate(BASE_URL, username, password)
     if 'DONE' in auth_status:
@@ -95,14 +95,14 @@ def main():
     else:
         print(f'[AUTHENTICATION STATUS] FAILURE {auth_status} {cookie_or_code}')
 
-    # RETRIEVE TOKEN USED IN SUBSEQUENT REQUESTS
+    # retrieve tokens that are used in the subsequent requests
     print('[TOKEN RETRIEVAL]')
     token = sdwan_get_token(BASE_URL, cookie_or_code['JSessionID'])
     print(f'[TOKEN RETRIEVAL] TOKEN: {token}')
 
     print('[DEVICE-DATA RETREIVAL]')
 
-    # RETRIEVE TOKEN USED IN ALL DEVICES
+    # get the token used in all devices
     response_dict1 = sdwan_get_all_devices(BASE_URL, cookie_or_code['JSessionID'], token)
     print(json.dumps(response_dict1['data'], indent=4))
     pretty_print_device_data(response_dict1['data'])
