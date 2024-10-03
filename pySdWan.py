@@ -107,7 +107,8 @@ def main():
     print(json.dumps(response_dict1['data'], indent=4))
     pretty_print_device_data(response_dict1['data'])
 
-#python interpretter has __name__ as a special code word to invoke a file, and its common to just name is __main__ but you can name it whatever you want, but its standard, just name it main. 
+#python interpretter has __name__ as a special code word to invoke a file, 
+#its common to just name is __main__ but you can name it whatever you want, but its standard, just name it main. 
 #this is great for helping prevent accidental script invocations where you dont want to invoke it
 if __name__ == '__main__':
     main()
