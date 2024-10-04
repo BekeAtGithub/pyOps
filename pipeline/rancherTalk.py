@@ -1,4 +1,8 @@
+#uses Rancher server API to manage k8s clusters 
+
 import requests
+#you need to install requests with pip- make sure you know your
+#rancher API URL and API key and the cluster ID you want to interact with
 
 #rancher endpoint/API key (use variables for a key vault) - so basically this script 
 RANCHER_API_URL = "https://<your-rancher-server-url>/v3"
