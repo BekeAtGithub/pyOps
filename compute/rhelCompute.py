@@ -16,6 +16,7 @@ def install_package(package_name):
         print(f"Failed to install package '{package_name}': {e.stderr}")
 
 # start a service using systemctl
+
 def start_service(service_name):
     try:
         result = subprocess.run(['sudo', 'systemctl', 'start', service_name], capture_output=True, text=True, check=True)
@@ -24,7 +25,8 @@ def start_service(service_name):
     except subprocess.CalledProcessError as e:
         print(f"Failed to start service '{service_name}': {e.stderr}")
 
-# enable a service at boot
+## enable a service to start at boot - note, start a service only turns it on, enabling turns it on - everytime it boots up
+#same with stop/disable - stop is to turn it off, disable is to turn it off - on boot
 def enable_service(service_name):
     try:
         result = subprocess.run(['sudo', 'systemctl', 'enable', service_name], capture_output=True, text=True, check=True)
