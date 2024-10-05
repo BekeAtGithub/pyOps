@@ -1,6 +1,6 @@
 import subprocess
 
-# Function to update package lists
+# update package lists
 def updatePackages():
     try:
         result = subprocess.run(['sudo', 'apt', 'update'], capture_output=True, text=True, check=True)
@@ -9,7 +9,7 @@ def updatePackages():
     except subprocess.CalledProcessError as e:
         print(f"Failed to update package lists: {e.stderr}")
 
-# Function to upgrade all packages
+# upgrade all packages
 def upgradePackages():
     try:
         result = subprocess.run(['sudo', 'apt', '-y', 'upgrade'], capture_output=True, text=True, check=True)
@@ -18,7 +18,7 @@ def upgradePackages():
     except subprocess.CalledProcessError as e:
         print(f"Failed to upgrade packages: {e.stderr}")
 
-# Function to install a specific package
+# install a specific package
 def installPackage(package_name):
     try:
         result = subprocess.run(['sudo', 'apt', '-y', 'install', package_name], capture_output=True, text=True, check=True)
@@ -27,7 +27,7 @@ def installPackage(package_name):
     except subprocess.CalledProcessError as e:
         print(f"Failed to install package '{package_name}': {e.stderr}")
 
-# Function to remove a specific package
+# remove a specific package
 def removePackage(package_name):
     try:
         result = subprocess.run(['sudo', 'apt', '-y', 'remove', package_name], capture_output=True, text=True, check=True)
@@ -55,7 +55,7 @@ def enableService(service_name):
     except subprocess.CalledProcessError as e:
         print(f"Failed to enable service '{service_name}': {e.stderr}")
 
-# Function to check the status of a service
+# Check status of a service
 def getServiceStatus(service_name):
     try:
         result = subprocess.run(['systemctl', 'status', service_name], capture_output=True, text=True, check=True)
@@ -65,13 +65,10 @@ def getServiceStatus(service_name):
         print(f"Failed to get status of service '{service_name}': {e.stderr}")
 
 if __name__ == "__main__":
-    # Example usage
-    
-    # Update and upgrade packages
+    #call main function
     updatePackages()
     upgradePackages()
-
-    # Install a package
+    
     package_name = "nginx"  # Example package name
     installPackage(package_name)
 
