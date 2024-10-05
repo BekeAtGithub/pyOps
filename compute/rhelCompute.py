@@ -1,6 +1,6 @@
 import subprocess
 
-# Function to install a package using yum or dnf
+#install packages via yum or dnf
 def install_package(package_name):
     try:
         # Try using dnf, if available
@@ -15,7 +15,7 @@ def install_package(package_name):
     except subprocess.CalledProcessError as e:
         print(f"Failed to install package '{package_name}': {e.stderr}")
 
-# Function to start a service using systemctl
+# start a service using systemctl
 def start_service(service_name):
     try:
         result = subprocess.run(['sudo', 'systemctl', 'start', service_name], capture_output=True, text=True, check=True)
@@ -24,7 +24,7 @@ def start_service(service_name):
     except subprocess.CalledProcessError as e:
         print(f"Failed to start service '{service_name}': {e.stderr}")
 
-# Function to enable a service at boot
+# enable a service at boot
 def enable_service(service_name):
     try:
         result = subprocess.run(['sudo', 'systemctl', 'enable', service_name], capture_output=True, text=True, check=True)
@@ -33,7 +33,7 @@ def enable_service(service_name):
     except subprocess.CalledProcessError as e:
         print(f"Failed to enable service '{service_name}': {e.stderr}")
 
-# Function to check the status of a service
+# check the status of a service
 def check_service_status(service_name):
     try:
         result = subprocess.run(['systemctl', 'status', service_name], capture_output=True, text=True, check=True)
@@ -43,18 +43,10 @@ def check_service_status(service_name):
         print(f"Service '{service_name}' status check failed: {e.stderr}")
 
 if __name__ == "__main__":
-    # Example usage
-
-    # Install a package
+#run __main__ variable - the main program 
     package_name = "httpd"  # Example package name (Apache web server)
     install_package(package_name)
-
-    # Start a service
     service_name = "httpd"
     start_service(service_name)
-
-    # Enable a service at boot
     enable_service(service_name)
-
-    # Check the status of a service
     check_service_status(service_name)
