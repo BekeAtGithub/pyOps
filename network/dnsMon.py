@@ -34,7 +34,7 @@ def monitor_dns(domain, interval=60):
         # Wait for the specified interval before checking again
         time.sleep(interval) #interval This parameter controls how often the script checks the DNS resolution time. You can adjust it as needed.
 
-if __name__ == "__main__":
+if __name__ == "__main__":#call function as main
     domain_to_monitor = "example.com"
     monitor_dns(domain_to_monitor, interval=60) # print the DNS resolution time every 60 seconds. You can modify it to log the results to a file or send alerts if the resolution time exceeds a certain threshold.
 
