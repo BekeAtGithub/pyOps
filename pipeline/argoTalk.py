@@ -58,7 +58,7 @@ def syncApp(app_name):
         print(f"Failed to synchronize application. Status Code: {response.status_code}, Error: {response.text}")
 
 if __name__ == "__main__":
-    # call functions as __main__
+    # call functions as __main__ 
     getApps()
   
     application_name = "<your-application-name>"
