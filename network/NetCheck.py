@@ -9,7 +9,7 @@ def netCheck():
 
 netCheck() # runs the netCheck function
 
-# defining network operations = x and y are dynamic variable placeholders for user input
+# defining network operations = x and y are dynamic variable placeholders for user input 
 def telnet (x, y):
     pass
 def netcat (x, y):
