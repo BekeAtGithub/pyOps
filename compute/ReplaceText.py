@@ -6,8 +6,8 @@ output_file = 'C:\File\Output\Path' # This will save the modified content to a n
 with open(input_file, 'r') as file:
     content = file.read()
 
-# Replace all backticks ` with hyphen -
-modified_content = content.replace('`', '-')
+# Replace all a's with b's
+modified_content = content.replace('a', 'b')
 
 # Write the modified content to the output file
 with open(output_file, 'w') as file:
