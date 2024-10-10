@@ -13,4 +13,4 @@ modified_content = content.replace('a', 'b')
 with open(output_file, 'w') as file:
     file.write(modified_content)
 
-print(f"All backticks ` have been replaced with hyphens - in '{output_file}'.")
+print(f"All a's have been replaced with b's in '{output_file}'.")
