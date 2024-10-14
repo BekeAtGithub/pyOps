@@ -10,7 +10,7 @@ def run_ansible_playbook(playbook_path, inventory_file):  # Function definition 
         result = subprocess.run(["ansible-playbook", "-i", inventory_file, playbook_path], capture_output=True, text=True)  # Command to run the playbook
         if result.returncode == 0:  # Checking if the playbook run was successful
             print("Playbook ran successfully.")  # Success message
-            print(result.stdout)  # Displaying the standard output from the command
+            print(result.stdout)  # Displaying the standard output from the command 
         else:
             print("Playbook execution failed.")  # Failure message
             print(f"Error: {result.stderr}")  # Displaying the error output
