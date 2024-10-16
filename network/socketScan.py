@@ -1,7 +1,7 @@
 # Importing the required modules
 import socket  # socket is a module that provides low-level networking interface 
 import subprocess  # subprocess is used to run shell commands
-import platform  # platform is used to get system's platform information
+import platform  # platform is used to get system's platform information 
 import dns.resolver  # dnspython library used for DNS resolution 
 
 # Function to check network connectivity
