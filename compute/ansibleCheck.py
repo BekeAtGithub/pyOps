@@ -8,7 +8,7 @@
 import ansible_runner
 import os
 
-#have to install ansible with "pip install ansible ansible-runner"
+#have to install ansible with "pip install ansible ansible-runner" 
 
 
 # this does not create a playbook, it runs an existing one
