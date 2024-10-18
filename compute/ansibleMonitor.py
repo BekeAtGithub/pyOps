@@ -4,7 +4,7 @@ import json  # json is used to work with JSON data
 
 # Function to run an Ansible playbook
 def run_ansible_playbook(playbook_path, inventory_file):  # Function definition with parameters
-    """Run an Ansible playbook given its path and inventory file."""  # Function docstring
+    """Run an Ansible playbook given its path and inventory file."""  # Function docstring 
     try:  # Try block for error handling
         # Running the ansible-playbook command using subprocess
         result = subprocess.run(["ansible-playbook", "-i", inventory_file, playbook_path], capture_output=True, text=True)  # Command to run the playbook
