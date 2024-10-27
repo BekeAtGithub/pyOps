@@ -8,7 +8,7 @@ import time
 
 # monitor_dns(domain, interval)` This function continuously monitors DNS resolution times for the given domain at the specified interval (default is 60 seconds)
 def monitor_dns(domain, interval=60):
-    resolver = dns.resolver.Resolver() # resolver.resolve(domain) Resolves the DNS for the specified domain. 
+    resolver = dns.resolver.Resolver() # resolver.resolve(domain) Resolves the DNS for the specified domain.  
 
     while True:
         start_time = time.time() #time.time() Used to calculate the time before and after the DNS resolution to determine how long it took.
