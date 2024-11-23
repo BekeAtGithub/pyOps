@@ -1,7 +1,7 @@
 #uses Helm CLI via python to manage helm charts. 
 #helm doesnt have an API so python executes helm commands 
 #Python uses subprocess module to run commands like:
-#helm list -all-namespaces
+#helm list -all-namespaces 
 #helm install --namespace
 #helm upgrade --namespace
 
