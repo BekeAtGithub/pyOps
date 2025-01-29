@@ -5,7 +5,7 @@ import time  # time is used for pausing execution and timing operations
 
 # Function to check the status of a build
 def check_build_status(build_url):  # Function definition with a parameter
-    """Check the status of a CI build given its URL."""  # Function docstring
+    """Check the status of a CI build given its URL."""  # Function docstring 
     try:  # Try block for error handling
         response = requests.get(build_url)  # Sending an HTTP GET request to the build URL
         if response.status_code == 200:  # Checking if the request was successful
