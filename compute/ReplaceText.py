@@ -1,5 +1,5 @@
 # Define the input file path and the output file path
-input_file = 'C:\File\Input\Path'   # Replace with your actual file name 
+input_file = 'C:\File\Input\Path'   # Replace with your actual file name
 output_file = 'C:\File\Output\Path' # This will save the modified content to a new file
 
 # Open the input file, read the content, and perform the replacement
