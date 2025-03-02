@@ -6,7 +6,7 @@ The script has dns.resolver module from the dnspython library to query the DNS s
 import dns.resolver
 import time
 
-# monitor_dns(domain, interval)` This function continuously monitors DNS resolution times for the given domain at the specified interval (default is 60 seconds)
+# monitor_dns(domain, interval)` This function continuously monitors DNS resolution times for the given domain at the specified interval (default is 60 seconds) 
 def monitor_dns(domain, interval=60):
     resolver = dns.resolver.Resolver() # resolver.resolve(domain) Resolves the DNS for the specified domain.  
 
