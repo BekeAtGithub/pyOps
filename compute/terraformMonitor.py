@@ -1,4 +1,4 @@
-# Importing the required modules
+# Importing the required modules 
 import subprocess  # subprocess is used to run shell commands
 
 # Function to initialize a Terraform configuration
