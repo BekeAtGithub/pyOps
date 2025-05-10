@@ -1,6 +1,6 @@
 #uses Argo CD - rest API to list apps, retreive details and forces sync
 
-import requests
+import requests 
 #install requests with pip
 #need Argo CD API server URL and token with right permissions
 
