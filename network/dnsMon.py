@@ -1,6 +1,6 @@
 '''
 The script has dns.resolver module from the dnspython library to query the DNS server - might need to install with "pip3 install dnspython" from command line 
-it basically monitors DNS resolution times of a specific domain. 
+it basically monitors DNS resolution times of a specific domain.  
 '''
 
 import dns.resolver
