@@ -2,7 +2,7 @@
 #helm doesnt have an API so python executes helm commands   
 #Python uses subprocess module to run commands like:
 #helm list -all-namespaces   
-#helm install --namespace   
+#helm install --namespace    
 #helm upgrade --namespace
 
 #guide: replace "release_name", "chart-name" and "namespace" with actual values
