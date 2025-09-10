@@ -1,4 +1,4 @@
-#uses Argo CD - rest API to list apps, retreive details and forces sync  
+#uses Argo CD - rest API to list apps, retreive details and forces sync
 
 import requests 
 #install requests with pip 
