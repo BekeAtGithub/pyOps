@@ -1,8 +1,8 @@
 #uses Argo CD - rest API to list apps, retreive details and forces sync
 
 import requests 
-#install requests with pip 
-#need Argo CD API server URL and token with right permissions 
+#install requests withh pip
+#need Argo CD API server URL and token with right permissions
 
 # Argo CD API URL and token - use a vault for yuour token, dont store it here in plain text
 ARGOCD_API_URL = "https://<your-argocd-server-url>/api/v1"
