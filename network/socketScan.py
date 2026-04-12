@@ -1,12 +1,12 @@
-# Importing the required modules
+#importing the required modules
 import socket  # socket is a module that provides low-level networking interface 
 import subprocess  # subprocess is used to run shell commands
 import platform  # platform is used to get system's platform information 
 import dns.resolver  # dnspython library used for DNS resolution 
 
-# Function to check network connectivity
-def check_network_connectivity(hostname="8.8.8.8"):  # Function definition with a default parameter
-    """Check network connectivity to a given hostname."""  # Function docstring
+#function to check network connectivity
+def check_network_connectivity(hostname="8.8.8.8"):  #function definition with a default parameter
+    """Check network connectivity to a given hostname."""  #function docstring
     try:  # Try block for error handling
         # Running the ping command to check connectivity
         response = subprocess.run(["ping", "-c", "1", hostname], capture_output=True, text=True)  # Using subprocess to ping a host
