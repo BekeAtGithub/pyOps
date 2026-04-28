@@ -7,7 +7,7 @@ def netCheck():
     print('NetCheck is where you may utilize BusyBox functionality')
     print()
 
-netCheck() # runs the netCheck function
+netCheck() # runs the netCheck function ,yea
 
 # defining network operations = x and y are dynamic variable placeholders for user input 
 def telnet (x, y):
